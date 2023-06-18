@@ -31,9 +31,8 @@ func Set[T comparable](slice []T) []T {
 // If value not found input slice is returned.
 // If value has multiple occurrences in slice only first is deleted.
 func Remove[T comparable](slice []T, value T) []T {
-	indexOf := IndexOf(slice, value)
-	if indexOf == -1 {
-		return slice
+	if indexOf := IndexOf(slice, value); indexOf >= 0 {
+		return append(slice[:indexOf], slice[indexOf+1:]...)
 	}
-	return append(slice[:indexOf], slice[indexOf+1:]...)
+	return slice
 }
