@@ -2,6 +2,12 @@
 
 Simple and easy to use collecting of `Python` functionality that is not easily available in `Go`.
 
+# Install 
+
+Simply run `go get github.com/westwardharbor0/pythonic` in your project root.
+
+For using start typing `pythonic.`.
+
 # Functions
 
 - `IN(slice, value) bool` - Returns if element is present in slice.
