@@ -55,3 +55,11 @@ func TestRemove__Int(t *testing.T) {
 		t.Error("`5` should not be present in slice anymore", testSlice, output)
 	}
 }
+
+func TestCounter__String(t *testing.T) {
+	testSlice := []string{"T", "T", "a", "a", "a", "es"}
+	output := Counter(testSlice)
+	if output["T"] != 2 || output["a"] != 3 || output["es"] != 1 {
+		t.Error("We expected other count of items", testSlice, output)
+	}
+}

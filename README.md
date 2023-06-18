@@ -14,6 +14,7 @@ For using start typing `pythonic.`.
 - `IndexOf(slice, value) int` - Returns index of the value in slice. Not found is -1.
 - `Set(slice, value) slice` - Deletes duplicates from slice and returns slice.
 - `Delete(slice, value) slice` - Deletes the item by value from slice and returns slice.
+- `Counter(slice) map` - Counts occurrences of items in string slice.
 
 Will be adding more.
 

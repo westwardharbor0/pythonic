@@ -36,3 +36,12 @@ func Remove[T comparable](slice []T, value T) []T {
 	}
 	return slice
 }
+
+// Counter returns amount of occurrences of each item in string slice.
+func Counter(slice []string) map[string]int {
+	result := make(map[string]int, 0)
+	for _, item := range slice {
+		result[item] += 1
+	}
+	return result
+}
